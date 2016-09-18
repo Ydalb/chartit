@@ -4,6 +4,21 @@
   font-weight: 400;
   src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/materialize.woff2) format('woff2');
 }
+@font-face {
+  font-family: 'jaapokki';
+  src: url('../fonts/JAAPOKKI-REGULAR.OTF') format('truetype');
+  font-weight:normal;
+}
+@font-face {
+  font-family: 'jaapokki-enchance';
+  src: url('../fonts/JAAPOKKIENCHANCE-REGULAR.OTF') format('truetype');
+  font-weight:normal;
+}
+@font-face {
+  font-family: 'jaapokki-subtract';
+  src: url('../fonts/JAAPOKKISUBTRACT-REGULAR.OTF') format('truetype');
+  font-weight:normal;
+}
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -18,4 +33,119 @@
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color:#fff;
+  color:#333;
+}
+
+header {
+  text-align: center;
+}
+.logo {
+  text-decoration: none;
+  color:#5f5a78;
+}
+.lead {
+  margin:0;
+  font-style: italic;
+}
+h2 {
+  font-family: 'jaapokki';
+  font-size:30px;
+  text-transform: uppercase;
+  color:#4e9cfe;
+  margin:0 0 60px 0;
+}
+/*
+main {
+  flex: 1 0 auto;
+}*/
+.row .col.s3b {
+  width: 20%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+.btn, .btn-large,
+.btn:hover, .btn-large:hover {
+  background-color:#5f5a78;
+}
+
+.question {
+/*  display:none;*/
+  padding:80px 0;
+}
+.question input,
+.question label:before,
+.question label:after {
+  display:none;
+}
+.question label {
+  display:block !important;
+  height:auto !important;
+  line-height: auto !important;
+  color:#000;
+  cursor: pointer;
+  padding:0 !important;
+
+}
+.img-answer {
+  max-width:100%;
+  opacity:0.75;
+}
+.question h4 {
+  font-family: 'jaapokki-subtract';
+  font-size:19px;
+  text-transform: uppercase;
+  margin:7px 0 0 0;
+}
+.question h5 {
+  margin:5px 0 0;
+  font-size:15px;
+  color:#888;
+}
+.question p {
+  font-size:12px;
+  line-height: 14px;
+}
+
+.question label:hover .img-answer,
+.question input:checked + label .img-answer {
+  opacity: 1;
+}
+#preview img {
+  max-width: 100%;
+}
+#action {
+  display:none;
+}
+#submit {
+  width:100%;
+}
+#progress {
+  display:none;
+  position:fixed;
+  top:0;
+  width:100%;
+}
+#progress .progress {
+  margin:0;
+}
+
+.progress .indeterminate {
+  background-color:#5f5a78;
+}
+
+#results {
+  min-height:100vh;
+  display:none;
+  background:#ffe;
+  overflow-y:scroll;
+}
+
+footer {
+  padding:100px 20px 30px;
+  text-align:center;
 }
