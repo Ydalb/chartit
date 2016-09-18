@@ -15,7 +15,12 @@
 
 </head>
 <body>
-
+  <nav role="navigation">
+    <div class="nav-wrapper white">
+      <a id="logo-container" href="#" class="brand-logo"><img src="assets/logo-chartit-brown.png" width="64" height="64" /></a>
+    </div>
+  </nav>
+    
   <div id="progress">
     <div class="progress">
         <div class="indeterminate"></div>
@@ -24,14 +29,14 @@
 
   <div class="container">
 
-    <header>
+<!--    <header>
       <a class="logo" href="index.html">
         <img src="assets/logo-chartit-brown.png" width="135" height="135" />
       </a>
       <p class="lead">
         This is an awesome baseline.
       </p>
-    </header>
+    </header>-->
 
 
     <main>
@@ -59,8 +64,20 @@
             </div>
           </div>
         </section>
+        
+        <!-- QUESTION Métier -->
+        <section id="qmetier" class="question">
+          <div class="input-field col s12">
+            <select id="qmetier" onChange={this.handleSelectChange}>
+              <option value="" disabled selected>Quel est votre domaine?</option>
+              <option value="1">Technologie</option>
+              <option value="2">Science</option>
+              <option value="3">Nature</option>
+            </select>
+          </div> 
+        </section>
 
-        <!-- QUESTION 3 -->
+        <!-- QUESTION 1 -->
         <section id="q1" class="question">
           <h2>Votre position sur le marché est plus :</h2>
           <div class="row">

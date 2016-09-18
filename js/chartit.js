@@ -36,18 +36,29 @@ function imageLoaded() {
   loader(false);
   $('#preview-img').show();
   setTimeout(function() {
-    $('#q1').fadeIn();
-    $('body').animate({scrollTop: $('#q1').offset().top}, 1000);
+    $('#qmetier').fadeIn();
+    $('body').animate({scrollTop: $('#qmetier').offset().top}, 1000);
   }, _SHORT_WAIT)
 }
 
 
 function loadAnimations() {
+  // init select
+  $('select').material_select();
+    
   // Goto questions
   $('body').on('change', '#file', function(event) {
     if (!readURL(this)) {
       return false;
     }
+  });
+  $('body').on('select', $('#qmetier'), function(event) {
+    $('#q1').fadeIn();
+    $('body').animate({scrollTop: $('#q1').offset().top}, 1000);
+    // loader(true);
+    // setTimeout(function() {
+    //   handleSubmit();
+    // }, _LONG_WAIT);
   });
   $('body').on('change', 'input[name="q1"]', function(event) {
     $('#q2').fadeIn();
@@ -73,7 +84,10 @@ function handleSubmit() {
   // showColorsForImage();
   loader(false);
   $('#results').show();
-  $('body').animate({scrollTop: $('#results').offset().top}, 1000);
+  $('body').animate({scrollTop: $('#results').offset().top}, 3000);
+    setTimeout(function(){
+    //do what you need here
+}, 4000);
 }
 
 function loader(show) {
@@ -82,5 +96,11 @@ function loader(show) {
   } else {
     $('#progress').hide();
   }
+}
+
+function handleSelectChange(elem){
+    console.log("lol");
+    $('#q1').fadeIn();
+    $('body').animate({scrollTop: $('#q1').offset().top}, 1000);
 }
 
